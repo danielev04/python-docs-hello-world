@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    response = requests.get("http://10.0.0.3/companies")
+    response = requests.get("http://10.0.0.3:5000/companies")
     print(response.status_code)
     json = str(response.content)
     return json
